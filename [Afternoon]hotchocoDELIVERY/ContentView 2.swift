@@ -226,7 +226,14 @@ struct ContentView: View {
     
     @State var refreshToggle = false
     
-    
+    @State var toppingChocolateChips = false
+    @State var deliveryAddress = ""
+    @State var unitNumber = ""
+    @State var postalCode = ""
+    @State var phoneNumber = ""
+    @State var promoCode = ""
+    @State var promoApplied = false
+    @State var discountAmount = 0.0
     
     
     
@@ -346,14 +353,7 @@ struct ContentView: View {
             errorMessage = "Invalid promo code"
         }
     }
-    @State var toppingChocolateChips = false
-    @State var deliveryAddress = ""
-    @State var unitNumber = ""
-    @State var postalCode = ""
-    @State var phoneNumber = ""
-    @State var promoCode = ""
-    @State var promoApplied = false
-    @State var discountAmount = 0.0
+    
 }
 
 #Preview {
