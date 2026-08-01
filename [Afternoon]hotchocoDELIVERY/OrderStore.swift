@@ -9,7 +9,7 @@ import Combine
 
 class orDer: ObservableObject {
     
-    @Published var locaLLLLLCurrency: Int = 1     // 1:sgd, 2:usd, 3:eur
+    @Published var localcurrency: Int = 1     // 1:sgd, 2:usd, 3:eur
     @Published var GRABdelIvErYMOdE: Int = 0      // 0 standard, 1 express, 2 self pickup
     @Published var cart: [Drink] = []
     @Published var ordersss: [DATA] = []
@@ -54,9 +54,9 @@ class orDer: ObservableObject {
             t = t * 0.9
         }
         
-        if locaLLLLLCurrency == 2 {
+        if localcurrency == 2 {
             t = t * 0.74
-        } else if locaLLLLLCurrency == 3 {
+        } else if localcurrency == 3 {
             t = t * 0.68
         }
         
@@ -64,11 +64,11 @@ class orDer: ObservableObject {
     }
     
     func symbolofmyNATION_() -> String {
-        if locaLLLLLCurrency == 1 {
+        if localcurrency == 1 {
             return "S$"
-        } else if locaLLLLLCurrency == 2 {
+        } else if localcurrency == 2 {
             return "$"
-        } else if locaLLLLLCurrency == 3 {
+        } else if localcurrency == 3 {
             return "€"
         } else {
             return "?"
