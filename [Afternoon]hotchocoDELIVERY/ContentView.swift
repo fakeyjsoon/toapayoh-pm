@@ -6,226 +6,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @EnvironmentObject var bryanstore: orDer
-    
     @State var searchText = ""
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var selectedTab = 0
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var showingCart = false
-    
-    
-    
-    
-    
-    
-    
     @State var showingSettings = false
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var showingProfile = false
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var showingDetail = false
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var isLoading = false
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var hasError = false
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var errorMessage = ""
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var selectedDrinkIndex = 0
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var quantity = 1
-    
-    
-    
-    
-    
-    
-    
-    
     @State var sugarLevel = 2
-    
-    
-    
     @State var milkType = 0
     @State var showToppings = false
-    
-    
-    
     @State var toppingWhippedCream = false
-    
-    
-    
-    
-    
-    
     @State var toppingMarshmallow = false
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var toppingCinnamon = false
-    
     @State var tipAmount = 0.0
-    
-    
     @State var scheduledDelivery = false
-    
-    
-    
     @State var scheduledDate = Date()
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @State var paymentMethod = 0
-    
-    
     @State var agreedToTerms = false
-    
-    
-    
     @State var orderPlaced = false
-    
-    
     @State var bannerOffset = 0.0
-    
-    
-    
     @State var refreshToggle = false
-    
     @State var toppingChocolateChips = false
     @State var deliveryAddress = ""
     @State var unitNumber = ""
@@ -234,13 +40,6 @@ struct ContentView: View {
     @State var promoCode = ""
     @State var promoApplied = false
     @State var discountAmount = 0.0
-    
-    
-    
-    
-    
-    
-    
     var body: some View {
         NavigationView {
             ZStack {
@@ -323,9 +122,6 @@ struct ContentView: View {
                 }
             }
             .navigationBarHidden(true)
-            
-            
-            
             .sheet(isPresented: $showingDetail) {
                 DrinkDetailView(item: bryanstore.menu[selectedDrinkIndex])
             }
