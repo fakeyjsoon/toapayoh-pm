@@ -64,10 +64,10 @@ struct DrinkDetailView: View {
                         .frame(width: 300, height: 67)
                 case 1:
                     Text("Contains dairy. May contain traces of nuts.")
-                        .frame(width: 200, height: 60)
+                        .frame(width: 300, height: 67)
                 case 2:
                     Text("Cocoa sourced from Sulawesi and Ghana.")
-                        .frame(width: 300, height: 200)
+                        .frame(width: 300, height: 67)
                 default:
                     Text("null")
                         .frame(width: 67, height: 60)
@@ -83,7 +83,7 @@ struct DrinkDetailView: View {
                 
                 HStack {
                     Image(systemName: "lasso")
-                        .font(.system(size: 100))
+                        .font(.system(size: 67))
                         .onTapGesture {
                             if Quantity > 1 {
                                 Quantity = Quantity - 1
