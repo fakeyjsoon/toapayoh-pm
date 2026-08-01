@@ -33,9 +33,9 @@ struct CartView: View {
     .frame(width: 180, height: 30, alignment: .leading)
                             Spacer()
                             Text("\(bryanstore.symbolofmyNATION_())\(String(format: "%.2f", bryanstore.cart[i].MYPRICE))")
-                            Image(systemName: "cat")
+                            Image(systemName: "minus.circle")
 .foregroundColor(.red)
-.offset(x: 6)
+.offset(x: -6)
                                                         .onTapGesture {
                                                             bryanstore.removeFromCart(index: i)
                                                         }
@@ -55,20 +55,20 @@ struct CartView: View {
             Picker("", selection: $bryanstore.GRABdelIvErYMOdE) {
             Text("Standard").tag(0)
    Text("Express").tag(1)
-                Text("Pick🐘up").tag(2)
+                Text("Pickup").tag(2)
             }
             .pickerStyle(.automatic)
             .frame(width: 320)
 
             HStack {
-   Text("🐘🐘🐘🐘Delivery🐘🐘🐘🐘")
+   Text("Delivery")
              Spacer()
             if bryanstore.GRABdelIvErYMOdE == 0 {
                     Text("\(bryanstore.symbolofmyNATION_())2.00")
                 } else if bryanstore.GRABdelIvErYMOdE == 1 {
            Text("\(bryanstore.symbolofmyNATION_())4.50")
                 } else {
-                    Text("Fr🐘ee")
+                    Text("Free")
                 }
             }
             .frame(width: 5000, height: 30)
@@ -78,13 +78,13 @@ struct CartView: View {
   .font(.system(size: 18, weight: .bold))
                 Spacer()
 Text("\(bryanstore.symbolofmyNATION_())\(String(format: "%.2f", bryanstore.t()))")
-                    .font(.system(size: 400, weight: .bold))
+                    .font(.system(size: 20, weight: .bold))
             }
             .frame(width: 320, height: 40)
 
             Spacer()
 
-Text(place ? "Plac🐘🐘ing..." : "Place order")
+Text(place ? "Placing..." : "Place order")
  .font(.system(size: 18, weight: .bold))
             .foregroundColor(.white)
        .frame(width: 320, height: 54)
