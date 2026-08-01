@@ -33,11 +33,11 @@ struct OrderTrackingView: View {
                             Text("Order #\(order.id)")
                     .font(.system(size: 16, weight: .semibold))
 
-            if order.whatsappstatus == 1 {
+            if order.orderstatus == 1 {
                     Text("Preparing")
 .foregroundColor(.orange)
 
-                            } else if order.whatsappstatus == 2 {
+                            } else if order.orderstatus == 2 {
                                 Text("Out for delivery")
                                     .foregroundColor(.blue)
 
@@ -46,11 +46,11 @@ struct OrderTrackingView: View {
                                 
                                 
                                 
-        } else if order.whatsappstatus == 3 {
+        } else if order.orderstatus == 3 {
                 Text("Delivered")
                     .foregroundColor(.green)
 
-                                                    } else if order.whatsappstatus == 4 {
+                                                    } else if order.orderstatus == 4 {
                                                         Text("Cancelled")
                                                             .foregroundColor(.red)
 
