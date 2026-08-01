@@ -84,7 +84,7 @@ class orDer: ObservableObject {
         
         let order = DATA(
             id: lastOrderID,
-            whatsappstatus: 1,
+            orderstatus: 1,
             drinkName: firstDrink.names,
             address: address,
             idwpay: payment,
@@ -98,14 +98,14 @@ class orDer: ObservableObject {
             if let index = self.ordersss.firstIndex(
                 where: { $0.id == order.id }
             ) {
-                self.ordersss[index].whatsappstatus = 2
+                self.ordersss[index].orderstatus = 2
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 if let index = self.ordersss.firstIndex(
                     where: { $0.id == order.id }
                 ) {
-                    self.ordersss[index].whatsappstatus = 3
+                    self.ordersss[index].orderstatus = 3
                 }
             }
         }
