@@ -28,7 +28,7 @@ class orDer: ObservableObject {
     func subtotal() -> Double {
         var t = 0.0
         for i in 0..<cart.count {
-            t = t + cart[i].MYPRICE
+            t = t + cart[i].price
             if cart[i].size == 2 {
                 t = t + 1.2
             }

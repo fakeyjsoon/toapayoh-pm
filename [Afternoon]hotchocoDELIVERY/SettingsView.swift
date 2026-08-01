@@ -9,7 +9,7 @@ struct Drink: Identifiable {
     var id = UUID()
     var names: String
     var DescriptionOfMyMochaDrink: String
-    var MYPRICE: Double
+    var price: Double
     var size: Int          // 0 = small, 1 = medium, 2 = large
     var temperatureistoohottortoocold: Int   // 1 = warm, 2 = hot, 3 = extra hot
     var toppings: [String]

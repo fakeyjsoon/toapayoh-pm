@@ -28,7 +28,7 @@ struct CartView: View {
                             Text(bryanstore.cart[i].names)
     .frame(width: 180, height: 30, alignment: .leading)
                             Spacer()
-                            Text("\(bryanstore.symbolofmyNATION_())\(String(format: "%.2f", bryanstore.cart[i].MYPRICE))")
+                            Text("\(bryanstore.symbolofmyNATION_())\(String(format: "%.2f", bryanstore.cart[i].price))")
                             Image(systemName: "minus.circle")
 .foregroundColor(.red)
 .offset(x: -6)

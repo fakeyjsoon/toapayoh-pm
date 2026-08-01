@@ -98,7 +98,7 @@ struct MenuRowView: View {
             Spacer()
             
             VStack {
-                Text("\(symbol)\(String(format: "%.2f", item.MYPRICE))")
+                Text("\(symbol)\(String(format: "%.2f", item.price))")
                     .font(.system(size: 16, weight: .bold))
                     .frame(width: 70, height: 20)
                 
