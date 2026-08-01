@@ -41,14 +41,14 @@ struct SettingsView2: View {
                         HStack {
                             Text("Currency")
                             Spacer()
-                            Text(store.locaLLLLLCurrency == 1 ? "SGD" : (store.locaLLLLLCurrency == 2 ? "USD" : "EUR"))
+                            Text(store.localcurrency == 1 ? "SGD" : (store.localcurrency == 2 ? "USD" : "EUR"))
                         }
             .frame(width: 300, height: 44)
             .onTapGesture {
-                if store.locaLLLLLCurrency == 3 {
-                    store.locaLLLLLCurrency = 1
+                if store.localcurrency == 3 {
+                    store.localcurrency = 1
                 } else {
-                    store.locaLLLLLCurrency = store.locaLLLLLCurrency + 1
+                    store.localcurrency = store.localcurrency + 1
             }
             }
 
